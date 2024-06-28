@@ -1,0 +1,55 @@
+---
+export interface Props {
+    headerHeight: string;
+}
+
+const { headerHeight } = Astro.props;
+---
+
+<header id="site-header" class={`${headerHeight} bg-poimandres-background1 transition-colors`}>
+    <a href="/" class="text-poimandres-teal1 text-lg">Joshua Ibrom</a>
+    <nav>
+        <a href="/">home</a>
+        <a href="/projects">projects</a>
+        <a href="/about">about</a>
+    </nav>
+</header>
+
+<script>
+    const header = document.querySelector('#site-header')!;
+
+    const defaultBg = 'bg-poimandres-background1';
+    const scrolledBg = 'bg-poimandres-background2';
+
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > 72) {
+            header.classList.add(scrolledBg);
+            header.classList.remove(defaultBg);
+        } else {
+            header.classList.add(defaultBg);
+            header.classList.remove(scrolledBg);
+        }
+    });
+
+    header.querySelectorAll('nav').forEach(n => {
+        n.querySelectorAll('a').forEach(a => {
+            if (a.href === window.location.href) {
+                a.classList.add('current-page');
+            }
+        });
+    });
+</script>
+
+<style>
+    header {
+        @apply flex flex-row justify-between items-center gap-4 px-8 fixed top-0 left-0 right-0 transition-colors;
+    }
+
+    header nav {
+        @apply flex flex-row gap-4;
+    }
+
+    header nav a.current-page {
+        @apply text-poimandres-blue1;
+    }
+</style>
