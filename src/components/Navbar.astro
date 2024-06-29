@@ -7,7 +7,7 @@ const { headerHeight } = Astro.props;
 ---
 
 <header id="site-header" style={`height: ${headerHeight};`} class="bg-poimandres-bg transition-colors">
-    <a href="/" class="text-poimandres-brightMint text-lg">Joshua Ibrom</a>
+    <a href="/" class="text-poimandres-brightMint text-lg" title="Go home">Joshua Ibrom</a>
     <nav>
         <a href="/">home</a>
         <a href="/projects">projects</a>
@@ -49,7 +49,15 @@ const { headerHeight } = Astro.props;
         @apply flex flex-row gap-4;
     }
 
+    header nav a {
+        @apply text-poimandres-white transition-colors;
+    }
+
     header nav a.current-page {
         @apply text-poimandres-lightBlue;
+    }
+
+    header nav a:hover {
+        @apply text-poimandres-brightYellow;
     }
 </style>
