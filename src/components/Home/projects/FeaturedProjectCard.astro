@@ -1,4 +1,6 @@
 ---
+import { type ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 import { type ProjectFrontmatter } from '../../../util/projectTypes.ts';
 export interface Props {
     project: ProjectFrontmatter;
@@ -8,11 +10,19 @@ export interface Props {
 const { title, stack, description, imageUrl } = Astro.props.project;
 
 const projectArticleUrl = `/projects/${Astro.props.slug}`;
+
+const imageName = `/src/assets/projects/${imageUrl.split('/').pop() ?? ''}`;
+const projectImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/projects/*.png');
+let useImage = projectImages[imageName] !== undefined;
+console.log(imageName, useImage);
 ---
 
 <div class="project-card">
     <a href={projectArticleUrl} title="Learn more" class="block feature-img">
-        <img src={imageUrl} alt={`Project feature image for ${title}.`}>
+        {useImage
+            ? <Image src={projectImages[imageName]()} alt={`Project feature image for ${title}.`} />
+            : <img src={imageUrl} alt={`Project feature image for ${title}.`}>
+        }
     </a>
     <div class="info">
         <h4 class="text-xl">
