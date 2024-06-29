@@ -19,7 +19,7 @@ const { headerHeight } = Astro.props;
     const header = document.querySelector('#site-header')!;
 
     const defaultBg = 'bg-poimandres-bg';
-    const scrolledBg = 'bg-poimandresStorm-bg';
+    const scrolledBg = 'bg-poimandresStorm-bg/[0.99]';
 
     function updateHeaderClasses() {
         if (window.scrollY > 72) {

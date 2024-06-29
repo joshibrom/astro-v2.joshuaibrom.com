@@ -10,9 +10,10 @@ const { headerHeightNum } = config;
 
 <BaseLayout title="Joshua Ibrom">
     <Hero />
-    <main style={`margin-top: calc(100dvh - min(500px, 50dvh) - ${headerHeightNum * 2}px)`}>
+    <main>
+        <hr class="border-poimandres-lowerBlue mx-8 md:mx-12 lg:mx-36" />
         <h3 style={`height: ${headerHeightNum - 2}px`} class="flex items-center justify-center text-2xl md:text-4xl lg:text-5xl text-poimandres-brightMint">Projects</h3>
-        <hr class="border-poimandres-lowerBlue" />
+        <hr class="border-poimandres-lowerBlue mx-8 md:mx-12 lg:mx-36" />
         <FeaturedProjects />
     </main>
 </BaseLayout>
