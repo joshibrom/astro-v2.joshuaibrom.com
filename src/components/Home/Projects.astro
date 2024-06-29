@@ -6,20 +6,20 @@ const projects = [
         key: 0,
         name: "Test Project 1",
         stack: ["Astro", "Tailwind"],
-        desc: "Foo bar.",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         key: 1,
         name: "Test Project 2",
         stack: ["Svelte", "Tailwind"],
-        desc: "Biz baz.",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
 ];
 ---
 
 <div
     id="featured-projects"
-    class="mx-auto py-12 px-8 md:px-12 lg:px-48 flex flex-col gap-12 w-3/4"
+    class="mx-auto py-12 px-8 flex flex-col gap-12 w-full lg:w-3/4"
 >
     {projects.map((p) => <FeaturedProjectCard project={p} />)}
 </div>

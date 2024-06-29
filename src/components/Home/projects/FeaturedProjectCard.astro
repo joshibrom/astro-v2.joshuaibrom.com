@@ -14,28 +14,41 @@ const { name, stack, desc } = Astro.props.project;
 <div class="project-card">
     <div
         class="feature-img"
-        style="width: 66%; aspect-ratio: 16 / 9; background-color: black;"
+        style="background-color: black;"
     >
     </div>
     <div class="info">
-        <h4>{name}</h4>
-        <ul>
-            {stack.map((tech) => <li>{tech}</li>)}
+        <h4 class="text-xl">{name}</h4>
+        <ul class="flex flex-row flex-wrap gap-4">
+            {stack.map((tech) => (
+                <li class="text-poimandres-brightMint text-xs lg:text-sm">
+                    {tech}
+                </li>
+            ))}
         </ul>
-        <p>{desc}</p>
+        <p class="bg-transparent md:bg-poimandresStorm-bg md:p-4">{desc}</p>
     </div>
 </div>
 
 <style>
+    .project-card {
+        @apply relative;
+    }
+    
+    .project-card .feature-img {
+        aspect-ratio: 16 / 9;
+        @apply w-full md:w-2/3;
+    }
+
     .project-card .info {
-        @apply flex;
+        @apply w-full md:w-1/2 lg:w-5/12 flex flex-col gap-2 bg-poimandresStorm-bg md:bg-transparent p-2 md:p-0 md:absolute md:bottom-0;
     }
 
     .project-card:nth-child(odd) .info {
-        @apply justify-end;
+        @apply md:items-end md:right-0;
     }
 
     .project-card:nth-child(even) .feature-img {
-        @apply ms-auto;
+        @apply md:ms-auto;
     }
 </style>
