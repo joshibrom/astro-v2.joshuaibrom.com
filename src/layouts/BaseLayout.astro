@@ -1,5 +1,6 @@
 ---
 import SiteNavbar from '../components/Navbar.astro';
+import SiteFooter from '../components/Footer.astro';
 import config from '../util/config.ts';
 import '../styles/globals.css';
 
@@ -25,5 +26,6 @@ const headerHeight = config.headerHeight;
         <div style={`padding-top: ${headerHeight};`}>
 		    <slot />
         </div>
+        <SiteFooter />
 	</body>
 </html>

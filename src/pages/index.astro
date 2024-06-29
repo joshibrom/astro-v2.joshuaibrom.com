@@ -1,19 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Home/Hero.astro';
+import SimpleAbout from '../components/Home/SimpleAbout.astro';
 import FeaturedProjects from '../components/Home/Projects.astro';
-
-import config from '../util/config.ts';
-
-const { headerHeightNum } = config;
 ---
 
 <BaseLayout title="Joshua Ibrom">
     <Hero />
-    <main>
-        <hr class="border-poimandres-lowerBlue mx-8 md:mx-12 lg:mx-36" />
-        <h3 style={`height: ${headerHeightNum - 2}px`} class="flex items-center justify-center text-2xl md:text-4xl lg:text-5xl text-poimandres-brightMint">Projects</h3>
-        <hr class="border-poimandres-lowerBlue mx-8 md:mx-12 lg:mx-36" />
-        <FeaturedProjects />
+    <main class="flex flex-col gap-24">
+        <section id="featured-projects">
+            <FeaturedProjects />
+        </section>
+        <section>
+            <SimpleAbout />
+        </section>
     </main>
 </BaseLayout>
+
+<style>
+    section {
+        @apply mx-auto px-8 w-full lg:w-3/4;
+    }
+</style>
