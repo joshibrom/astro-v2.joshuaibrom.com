@@ -1,25 +1,25 @@
 ---
-import FeaturedProjectCard from "./projects/FeaturedProjectCard.astro";
+import { type MarkdownInstance } from "astro";
 
-const projects = [
-    {
-        key: 0,
-        name: "Test Project 1",
-        stack: ["Astro", "Tailwind"],
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-        key: 1,
-        name: "Test Project 2",
-        stack: ["Svelte", "Tailwind"],
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-];
+import FeaturedProjectCard from "./projects/FeaturedProjectCard.astro";
+import { type ProjectFrontmatter } from '../../util/projectTypes.ts';
+
+function getFrontmatter(p: MarkdownInstance<Record<string, any>>): ProjectFrontmatter {
+    return p.frontmatter as ProjectFrontmatter;
+}
+
+function getSlug(p: MarkdownInstance<Record<string, any>>): string {
+    return p.file.split('/').pop()?.replace('.md', '') ?? '#';
+}
+
+const featuredProjects = (await Astro.glob('../../content/projects/*.md'))
+    .filter(p => getFrontmatter(p).feature)
+    .sort((a, b) => (new Date(getFrontmatter(b).date).getTime() - new Date(getFrontmatter(a).date).getTime()));
 ---
 
 <div
     id="featured-projects"
     class="mx-auto py-12 px-8 flex flex-col gap-12 w-full lg:w-3/4"
 >
-    {projects.map((p) => <FeaturedProjectCard project={p} />)}
+    {featuredProjects.map((p) => <FeaturedProjectCard project={getFrontmatter(p)} slug={getSlug(p)} />)}
 </div>
