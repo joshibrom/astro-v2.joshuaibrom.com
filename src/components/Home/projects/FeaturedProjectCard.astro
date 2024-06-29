@@ -5,20 +5,22 @@ export interface Props {
         name: string;
         stack: string[];
         desc: string;
-    }
+    };
 }
 
 const { name, stack, desc } = Astro.props.project;
 ---
 
 <div class="project-card">
-    <div class="feature-img" style="width: 619px; height: 334px; background-color: black;"></div>
+    <div
+        class="feature-img"
+        style="width: 66%; aspect-ratio: 16 / 9; background-color: black;"
+    >
+    </div>
     <div class="info">
         <h4>{name}</h4>
         <ul>
-            {stack.map(tech => (
-                <li>{tech}</li>
-            ))}
+            {stack.map((tech) => <li>{tech}</li>)}
         </ul>
         <p>{desc}</p>
     </div>
