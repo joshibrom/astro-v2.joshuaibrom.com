@@ -1,3 +1,55 @@
-<div>
-    Joshua Ibrom
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<div id="hero">
+    <h2>Howdy, I'm</h2>
+    <h1>Joshua Ibrom.</h1>
+    <h2>junior developer &amp; coffee addict</h2>
+    <p>
+        I&apos;m a junior <span>software engineer</span> and digital craftsman
+        focused on building solutions that
+        <span>enable awesome digital experiences</span>.
+    </p>
+    <div class="socials">
+        <a href="https://github.com/sk3p7ic" title="sk3p7ic on Github" target="_blank"><Icon name="simple-icons:github" /></a>
+        <a href="https://linkedin.com/in/Joshua-Ibrom" title="Joshua Ibrom on LinkedIn" target="_blank"><Icon name="simple-icons:linkedin" /></a>
+        <a href="https://x.com/real_sk3p7ic" title="real_sk3p7ic on X" target="_blank"><Icon name="simple-icons:x" /></a>
+        <a href="https://blog.joshuaibrom.com" title="My blog" target="_blank"><Icon name="mdi:book-open-variant" /></a>
+    </div>
 </div>
+
+<style>
+    #hero {
+        height: min(500px, 50dvh);
+        @apply flex flex-col justify-center gap-2 p-8;
+    }
+
+    #hero h1 {
+        @apply text-4xl tracking-wider text-poimandres-teal1;
+    }
+
+    #hero h2 {
+        @apply text-lg;
+    }
+
+    #hero p {
+        @apply max-w-prose my-4;
+    }
+
+    #hero p span {
+        @apply text-poimandres-pink2;
+    }
+
+    #hero .socials {
+        @apply flex flex-row gap-8 items-center;
+    }
+
+    #hero .socials [data-icon] {
+        @apply size-6;
+    }
+
+    #hero .socials [data-icon="mdi:book-open-variant"] {
+        @apply size-7;
+    }
+</style>
