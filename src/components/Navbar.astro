@@ -6,8 +6,8 @@ export interface Props {
 const { headerHeight } = Astro.props;
 ---
 
-<header id="site-header" style={`height: ${headerHeight};`} class="bg-poimandres-background1 transition-colors">
-    <a href="/" class="text-poimandres-teal1 text-lg">Joshua Ibrom</a>
+<header id="site-header" style={`height: ${headerHeight};`} class="bg-poimandres-bg transition-colors">
+    <a href="/" class="text-poimandres-brightMint text-lg" title="Go home">Joshua Ibrom</a>
     <nav>
         <a href="/">home</a>
         <a href="/projects">projects</a>
@@ -18,8 +18,8 @@ const { headerHeight } = Astro.props;
 <script>
     const header = document.querySelector('#site-header')!;
 
-    const defaultBg = 'bg-poimandres-background1';
-    const scrolledBg = 'bg-poimandres-background2';
+    const defaultBg = 'bg-poimandres-bg';
+    const scrolledBg = 'bg-poimandresStorm-bg';
 
     document.addEventListener('scroll', () => {
         if (window.scrollY > 72) {
@@ -49,7 +49,15 @@ const { headerHeight } = Astro.props;
         @apply flex flex-row gap-4;
     }
 
+    header nav a {
+        @apply text-poimandres-white transition-colors;
+    }
+
     header nav a.current-page {
-        @apply text-poimandres-blue1;
+        @apply text-poimandres-lightBlue;
+    }
+
+    header nav a:hover {
+        @apply text-poimandres-brightYellow;
     }
 </style>
