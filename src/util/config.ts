@@ -1,9 +1,13 @@
+const height = 72;
+
 type Config = {
+  headerHeightNum: number;
   headerHeight: string;
 }
 
 const config: Config = {
-  headerHeight: '72px'
+  headerHeightNum: height,
+  headerHeight: `${height}px`,
 };
 
 export default config
