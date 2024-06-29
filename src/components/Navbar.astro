@@ -6,7 +6,7 @@ export interface Props {
 const { headerHeight } = Astro.props;
 ---
 
-<header id="site-header" class={`${headerHeight} bg-poimandres-background1 transition-colors`}>
+<header id="site-header" style={`height: ${headerHeight};`} class="bg-poimandres-background1 transition-colors">
     <a href="/" class="text-poimandres-teal1 text-lg">Joshua Ibrom</a>
     <nav>
         <a href="/">home</a>

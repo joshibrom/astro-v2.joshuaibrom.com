@@ -1,5 +1,6 @@
 ---
 import SiteNavbar from '../components/Navbar.astro';
+import config from '../util/config.ts';
 import '../styles/globals.css';
 
 export interface Props {
@@ -8,7 +9,7 @@ export interface Props {
 
 const { title } = Astro.props;
 
-const headerHeight = '72px';
+const headerHeight = config.headerHeight;
 ---
 
 <html lang="en">
@@ -19,9 +20,9 @@ const headerHeight = '72px';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-poimandres-background1 text-poimandres-text h-[200vh]">
-        <SiteNavbar headerHeight={`h-[${headerHeight}]`} />
-        <div class={`pt-[${headerHeight}]`}>
+	<body class="bg-poimandres-background1 text-poimandres-text">
+        <SiteNavbar headerHeight={headerHeight} />
+        <div style={`padding-top: ${headerHeight};`}>
 		    <slot />
         </div>
 	</body>
