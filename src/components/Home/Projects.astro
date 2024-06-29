@@ -1,0 +1,14 @@
+---
+import FeaturedProjectCard from './projects/FeaturedProjectCard.astro';
+
+const projects = [
+    { key: 0, name: "Test Project 1", stack: ["Astro", "Tailwind"], desc: "Foo bar." },
+    { key: 1, name: "Test Project 2", stack: ["Svelte", "Tailwind"], desc: "Biz baz." },
+];
+---
+
+<div id="featured-projects" class="py-12 px-8 md:px-12 lg:px-48 flex flex-col gap-12">
+    {projects.map(p => (
+        <FeaturedProjectCard project={p} />
+    ))}
+</div>

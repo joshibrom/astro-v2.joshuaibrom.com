@@ -1,0 +1,39 @@
+---
+export interface Props {
+    project: {
+        key: number;
+        name: string;
+        stack: string[];
+        desc: string;
+    }
+}
+
+const { name, stack, desc } = Astro.props.project;
+---
+
+<div class="project-card">
+    <div class="feature-img" style="width: 619px; height: 334px; background-color: black;"></div>
+    <div class="info">
+        <h4>{name}</h4>
+        <ul>
+            {stack.map(tech => (
+                <li>{tech}</li>
+            ))}
+        </ul>
+        <p>{desc}</p>
+    </div>
+</div>
+
+<style>
+    .project-card .info {
+        @apply flex;
+    }
+
+    .project-card:nth-child(odd) .info {
+        @apply justify-end;
+    }
+
+    .project-card:nth-child(even) .feature-img {
+        @apply ms-auto;
+    }
+</style>

@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Home/Hero.astro';
+import FeaturedProjects from '../components/Home/Projects.astro';
 
 import config from '../util/config.ts';
 
-const { headerHeightNum, headerHeight } = config;
+const { headerHeightNum } = config;
 ---
 
 <BaseLayout title="Joshua Ibrom">
@@ -12,5 +13,6 @@ const { headerHeightNum, headerHeight } = config;
     <main style={`margin-top: calc(100dvh - min(500px, 50dvh) - ${headerHeightNum * 2}px)`}>
         <h3 style={`height: ${headerHeightNum - 2}px`} class="flex items-center justify-center text-2xl md:text-4xl lg:text-5xl text-poimandres-brightMint">Projects</h3>
         <hr class="border-poimandres-lowerBlue" />
+        <FeaturedProjects />
     </main>
 </BaseLayout>
