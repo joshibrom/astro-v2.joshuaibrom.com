@@ -14,7 +14,6 @@ const projectArticleUrl = `/projects/${Astro.props.slug}`;
 const imageName = `/src/assets/projects/${imageUrl.split('/').pop() ?? ''}`;
 const projectImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/projects/*.png');
 let useImage = projectImages[imageName] !== undefined;
-console.log(imageName, useImage);
 ---
 
 <div class="project-card">

@@ -1,19 +1,9 @@
 ---
-import { type MarkdownInstance } from "astro";
-
 import FeaturedProjectCard from "./projects/FeaturedProjectCard.astro";
-import { type ProjectFrontmatter } from '../../util/projectTypes.ts';
+import { getFrontmatter, getSlug } from '../../util/projectTypes.ts';
 import config from '../../util/config.ts';
 
 const { headerHeightNum } = config;
-
-function getFrontmatter(p: MarkdownInstance<Record<string, any>>): ProjectFrontmatter {
-    return p.frontmatter as ProjectFrontmatter;
-}
-
-function getSlug(p: MarkdownInstance<Record<string, any>>): string {
-    return p.file.split('/').pop()?.replace('.md', '') ?? '#';
-}
 
 const featuredProjects = (await Astro.glob('../../content/projects/*.md'))
     .filter(p => getFrontmatter(p).feature)
