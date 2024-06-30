@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/Projects/ProjectCard.astro';
+import { getFrontmatter, getSlug } from '../../util/projectTypes.ts';
+
+const projects = (await Astro.glob('../../content/projects/*.md'))
+    .sort((a, b) => (
+        new Date(getFrontmatter(b).date).getTime() - new Date(getFrontmatter(a).date).getTime()
+    ));
+---
+
+<BaseLayout title="Joshua Ibrom | Projects">
+    <main class="flex flex-col gap-12">
+        <section class="flex flex-col gap-8">
+            <h1 class="text-3xl lg:text-4xl text-poimandres-brightMint">Projects</h1>
+            <div>
+                {projects.map(p => <ProjectCard project={getFrontmatter(p)} slug={getSlug(p)} />)}
+            </div>
+        </section>
+    </main>
+</BaseLayout>
+
+<style>
+    section {
+        @apply mx-auto px-8 w-full lg:w-3/4;
+    }
+</style>
