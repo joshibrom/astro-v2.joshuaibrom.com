@@ -1,0 +1,39 @@
+---
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AboutStatement from '../components/AboutStatement.astro';
+import JobCard from '../components/About/JobCard.astro';
+
+const jobs = (await Astro.glob('../content/jobs/*.md'));
+---
+
+<BaseLayout title="Joshua Ibrom | About">
+    <main class="flex flex-col gap-12">
+        <section class="flex flex-col gap-8">
+            <h1 class="text-3xl lg:text-4xl text-poimandres-brightMint">About</h1>
+            <AboutStatement />
+            <p>
+                As of late I have greatly enjoyed learning more about systems
+                programming and memory safety as well as the methods by which
+                programming languages are created, such as through tokenization
+                and parsing abstract syntax trees. I have also found aspects of
+                machine learning and artificial intelligence to be fascinating
+                to learn and explore as I attempt to apply those concepts to
+                programs and models driven by Rust- and / or Zig-based code
+                bases.
+            </p>
+        </section>
+        <section class="flex flex-col gap-8">
+            <h2 class="text-2xl lg:text-3xl text-poimandres-brightMint">Employment History</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                {jobs.map(job => <JobCard job={job} />)}
+            </div>
+        </section>
+    </main>
+</BaseLayout>
+
+<style>
+    section {
+        @apply mx-auto px-8 w-full lg:w-3/4;
+    }
+</style>
