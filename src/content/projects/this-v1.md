@@ -11,7 +11,7 @@ feature: false
 date: Mar 01 2023
 deployments:
     - name: My Portfolio (v1)
-      href: v1.joshuaibrom.com
+      href: https://v1.joshuaibrom.com
 repos:
     - name: GitHub
       href: https://github.com/sk3p7ic/astro.joshuaibrom.com
