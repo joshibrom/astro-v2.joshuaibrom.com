@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/inter": "^5.0.18",
     "@iconify-json/mdi": "^1.1.67",
     "@iconify-json/simple-icons": "^1.1.107",
     "@tailwindcss/typography": "^0.5.13",

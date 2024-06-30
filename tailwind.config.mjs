@@ -1,3 +1,4 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
 import { poimandres, poimandresStorm } from "./colorscheme.config.mjs";
 
 /** @type {import('tailwindcss').Config} */
@@ -8,6 +9,9 @@ export default {
             colors: {
                 poimandres,
                 poimandresStorm
+            },
+            fontFamily: {
+                sans: ['Inter', ...defaultTheme.fontFamily.sans]
             },
             typography: ({theme}) => ({
                 poimandres: {
