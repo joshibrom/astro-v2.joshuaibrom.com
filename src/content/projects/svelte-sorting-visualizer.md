@@ -8,7 +8,8 @@ imageUrl: /res/projects/svelte-sorting-visualizer.png
 feature: true
 date: Sep 04 2023
 deployments:
-    - https://sk3p7ic.github.io/Sorting-Visualizer
+    - name: Github Pages
+      href: https://sk3p7ic.github.io/Sorting-Visualizer
 repos:
     - name: GitHub
       href: https://github.com/sk3p7ic/sorting-visualizer

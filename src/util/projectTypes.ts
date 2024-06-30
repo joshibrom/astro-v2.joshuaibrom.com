@@ -1,6 +1,6 @@
 import { type MarkdownInstance } from "astro";
 
-export type Repo = {
+export type Link = {
     name: string;
     href: string;
 };
@@ -13,8 +13,8 @@ export type ProjectFrontmatter = {
     imageUrl: string;
     feature: boolean;
     date: string;
-    repos: Repo[] | null;
-    deployments: string[] | null;
+    repos: Link[] | null;
+    deployments: Link[] | null;
 };
 
 export function getFrontmatter(p: MarkdownInstance<Record<string, any>>): ProjectFrontmatter {

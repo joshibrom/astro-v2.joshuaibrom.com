@@ -9,7 +9,8 @@ imageUrl: /res/projects/sorting-visualizer.png
 feature: false
 date: Mar 10 2022
 deployments:
-    - https://sk3p7ic.github.io/Sorting-Visualizer
+    - name: Github Pages
+      href: https://sk3p7ic.github.io/Sorting-Visualizer
 repos:
     - name: GitHub
       href: https://github.com/sk3p7ic/sorting-visualizer

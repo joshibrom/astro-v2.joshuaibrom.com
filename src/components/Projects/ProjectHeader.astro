@@ -27,7 +27,7 @@ let useImage = projectImages[imageName] !== undefined;
         ? <Image src={projectImages[imageName]()} alt={`Project feature image for ${title}.`} />
         : <img src={imageUrl} alt={`Project feature image for ${title}.`}>
     }
-    <div class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
         {repos && (
             <div class="project-links">
                 <h3>Repositories</h3>
@@ -48,8 +48,8 @@ let useImage = projectImages[imageName] !== undefined;
                 <ul>
                     {deployments.map(d => (
                         <li>
-                            <a href={d} target="_blank" class="text-poimandres-white hover:text-poimandres-brightYellow transition-colors">
-                                {d}
+                            <a href={d.href} target="_blank" class="text-poimandres-white hover:text-poimandres-brightYellow transition-colors">
+                                {d.name}
                             </a>
                         </li>
                     ))}

@@ -12,6 +12,8 @@ imageUrl: /res/projects/hack-sa.png
 feature: true
 date: Oct 21, 2023
 deployments:
+    - name: HackSA Website (Vercel)
+      href: https://hack-sa.vercel.app/
 repos:
     - name: GitHub
       href: https://github.com/acm-tamusa/HackSA-Website
