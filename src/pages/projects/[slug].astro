@@ -1,0 +1,34 @@
+---
+import type { MarkdownInstance } from "astro";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectHeader from '../../components/Projects/ProjectHeader.astro';
+import { getFrontmatter } from "../../util/projectTypes";
+
+type RawProjectT = MarkdownInstance<Record<string, any>>;
+type PathsReturnT = {
+    params: { slug: string };
+    props: { project: RawProjectT }
+};
+
+export const getStaticPaths = async (): Promise<PathsReturnT[]> => {
+    return (await Astro.glob('../../content/projects/*.md'))
+        .map((p: RawProjectT) => {
+            const slug = p.file.split('/').pop()?.replace('.md', '') ?? p.file;
+            return {
+                params: { slug },
+                props: { project: p }
+            };
+        });
+};
+
+const { project } = Astro.props;
+---
+
+<BaseLayout title="Joshua Ibrom">
+    <main>
+        <ProjectHeader frontmatter={getFrontmatter(project)} />
+        <article class="prose prose-poimandres mx-auto">
+            <project.Content />
+        </article>
+    </main>
+</BaseLayout>

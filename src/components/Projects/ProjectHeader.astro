@@ -1,0 +1,78 @@
+---
+import { type ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import { type ProjectFrontmatter } from '../../util/projectTypes.ts';
+
+export interface Props {
+    frontmatter: ProjectFrontmatter;
+}
+
+const { title, stack, imageUrl, repos, deployments, tagline } = Astro.props.frontmatter;
+
+const imageName = `/src/assets/projects/${imageUrl.split('/').pop() ?? ''}`;
+const projectImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/projects/*.png');
+let useImage = projectImages[imageName] !== undefined;
+---
+
+<div class="max-w-prose mx-auto flex flex-col gap-4">
+    <h1 class="text-3xl lg:text-4xl text-poimandres-brightMint">{title}</h1>
+    {stack && (
+        <ul class="flex flex-row gap-4 flex-wrap">
+            {stack.map(tech => (
+                <li class="text-poimandres-lowerMint">{tech}</li>
+            ))}
+        </ul>
+    )}
+    {useImage
+        ? <Image src={projectImages[imageName]()} alt={`Project feature image for ${title}.`} />
+        : <img src={imageUrl} alt={`Project feature image for ${title}.`}>
+    }
+    {tagline && (
+        <p class="font-bold">{tagline}</p>
+    )}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+        {repos && (
+            <div class="project-links">
+                <h3>Repositories</h3>
+                <ul>
+                    {repos.map(r => (
+                        <li>
+                            <a href={r.href} target="_blank" class="underline text-poimandres-white hover:text-poimandres-brightYellow transition-colors">
+                                {r.name}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        )}
+        {deployments && (
+            <div class="project-links">
+                <h3>Deployments</h3>
+                <ul>
+                    {deployments.map(d => (
+                        <li>
+                            <a href={d.href} target="_blank" class="underline text-poimandres-white hover:text-poimandres-brightYellow transition-colors">
+                                {d.name}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        )}
+    </div>
+    <hr class="mb-4" />
+</div>
+
+<style>
+    h3 {
+        @apply text-xl lg:text-2xl text-poimandres-lightBlue;
+    }
+
+    .project-links {
+        @apply flex flex-col gap-2;
+    }
+    
+    .project-links ul {
+        @apply list-disc list-inside;
+    }
+</style>

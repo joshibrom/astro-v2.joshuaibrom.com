@@ -12,13 +12,12 @@ imageUrl: /res/projects/sk3p7ic-blog.png
 feature: true
 date: Dec 31, 2023
 deployments:
+    - name: blog.joshuaibrom.com (Vercel)
+      href: https://blog.joshuaibrom.com
 repos:
     - name: GitHub
       href: https://github.com/sk3p7ic/blog.joshuaibrom.com
 ---
-
-> GitHub: [sk3p7ic/blog.joshuaibrom.com](https://github.com/sk3p7ic/blog.joshuaibrom.com)  
-> Deployment: [blog.joshuaibrom.com](https://blog.joshuaibrom.com/)
 
 ## About
 

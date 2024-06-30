@@ -14,11 +14,8 @@ repos:
     - name: GitHub
       href: https://github.com/acm-tamusa/HackSA-Website
 deployments:
+tagline: Winner of the 2024 RowdyHacks SWIVEL Challenge.
 ---
-
-> GitHub: [Joshua-Ludolf/FossilFinances](https://github.com/Joshua-Ludolf/FossilFinances)
-
-> Winner of the 2024 RowdyHacks SWIVEL Challenge.
 
 ## About
 
