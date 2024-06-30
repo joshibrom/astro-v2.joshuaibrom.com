@@ -17,9 +17,6 @@ repos:
       href: https://github.com/sk3p7ic/astro.joshuaibrom.com
 ---
 
-> GitHub: [sk3p7ic/astro.joshuaibrom.com](https://github.com/sk3p7ic/astro.joshuaibrom.com)  
-> Deployment: [joshuaibrom.com](https://joshuaibrom.com)
-
 ## About
 
 This website is intended to be used as more of a personal portfolio for myself.

@@ -15,9 +15,6 @@ repos:
       href: https://github.com/sk3p7ic/sorting-visualizer
 ---
 
-> GitHub: [sk3p7ic/sorting-with-svelte](https://github.com/sk3p7ic/sorting-with-svelte)  
-> Deployment: [Vercel](https://sorting-with-svelte.vercel.app/)
-
 ## About
 
 This web application was built with the goal of making it easier to visualize how sorting algorithms work.

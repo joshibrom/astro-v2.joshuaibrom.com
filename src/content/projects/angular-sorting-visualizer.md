@@ -16,9 +16,6 @@ repos:
       href: https://github.com/sk3p7ic/sorting-visualizer
 ---
 
-> GitHub: [sk3p7ic/sorting-visualizer](https://github.com/sk3p7ic/sorting-visualizer)  
-> Deployment: [GitHub Pages](https://sk3p7ic.github.io/Sorting-Visualizer/)
-
 ## About
 
 This web application was built with the goal of making it easier to visualize how sorting algorithms work.

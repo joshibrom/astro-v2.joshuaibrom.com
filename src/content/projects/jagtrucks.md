@@ -19,10 +19,6 @@ repos:
       href: https://github.com/sk3p7ic/wad-JagTrucks-backend
 ---
 
-> GitHub (Frontend): [sk3p7ic/wad-JagTrucks](https://github.com/sk3p7ic/wad-JagTrucks)  
-> GitHub (Backend): [sk3p7ic/wad-JagTrucks-backend](https://github.com/sk3p7ic/wad-JagTrucks-backend)  
-> Deployment: Previously deployed to ~~[Heroku](https://wad-jagtrucks.herokuapp.com/)~~ (RIP tons of projects)
-
 ## About
 
 JagTrucks is a website that would enable users to view the various food truck offerings available on campus at Texas A&M University - San Antonio.

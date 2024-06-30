@@ -19,9 +19,6 @@ repos:
       href: https://github.com/acm-tamusa/HackSA-Website
 ---
 
-> GitHub: [acm-tamusa/HackSA-Website](https://github.com/acm-tamusa/HackSA-Website)  
-> Deployment: [hack-sa.vercel.app](https://hack-sa.vercel.app/)
-
 ## About
 
 HackSA is a hackathon hosted by the ACM chapter at Texas A&M University - San Antonio, of which I am a member. This was our

@@ -19,9 +19,6 @@ repos:
       href: https://github.com/sk3p7ic/blog.joshuaibrom.com
 ---
 
-> GitHub: [sk3p7ic/blog.joshuaibrom.com](https://github.com/sk3p7ic/blog.joshuaibrom.com)  
-> Deployment: [blog.joshuaibrom.com](https://blog.joshuaibrom.com/)
-
 ## About
 
 This is my personal blog, where I write about various topics such as programming, technology, and other interests of mine. I've

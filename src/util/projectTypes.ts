@@ -15,6 +15,7 @@ export type ProjectFrontmatter = {
     date: string;
     repos: Link[] | null;
     deployments: Link[] | null;
+    tagline?: string;
 };
 
 export function getFrontmatter(p: MarkdownInstance<Record<string, any>>): ProjectFrontmatter {
