@@ -25,14 +25,14 @@ console.log(imageName, useImage);
         }
     </a>
     <div class="info">
-        <h4 class="text-xl">
+        <h4 class="text-xl xl:text-3xl">
             <a href={projectArticleUrl} title="Learn more" class="hover:text-poimandres-brightYellow transition-colors">
                 {title}
             </a>
         </h4>
         <ul class="flex flex-row flex-wrap gap-4 md:w-2/3 lg:w-3/4">
             {stack?.map((tech) => (
-                <li class="text-poimandres-brightMint text-xs lg:text-sm">
+                <li class="text-poimandres-brightMint text-xs lg:text-sm xl:text-lg">
                     {tech}
                 </li>
             ))}
