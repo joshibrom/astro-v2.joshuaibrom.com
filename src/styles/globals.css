@@ -1,15 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/*
-@layer components {
-    .job-card-description ul {
-        @apply list-disc list-inside;
-    }
-
-    .job-card-description ol {
-        @apply list-decimal list-inside;
-    }
-}
-*/
