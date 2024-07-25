@@ -8,9 +8,12 @@ import '../styles/globals.css';
 
 export interface Props {
     title: string;
+    description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
+
+const desc = description ?? "Joshua Ibrom is a junior software engineer and digital craftsman focused on building solutions that enable awesome digital experiences.";
 
 const headerHeight = config.headerHeight;
 ---
@@ -21,6 +24,7 @@ const headerHeight = config.headerHeight;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+        <meta name="description" content={desc} />
 		<title>{title}</title>
 	</head>
 	<body class="bg-poimandres-bg text-poimandres-white min-h-screen flex flex-col">

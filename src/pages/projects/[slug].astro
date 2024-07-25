@@ -22,9 +22,10 @@ export const getStaticPaths = async (): Promise<PathsReturnT[]> => {
 };
 
 const { project } = Astro.props;
+const description = getFrontmatter(project).description;
 ---
 
-<BaseLayout title="Joshua Ibrom">
+<BaseLayout title="Joshua Ibrom" description={description}>
     <main>
         <ProjectHeader frontmatter={getFrontmatter(project)} />
         <article class="prose prose-poimandres mx-auto">
