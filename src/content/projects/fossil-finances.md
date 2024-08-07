@@ -12,7 +12,7 @@ feature: true
 date: Feb 24, 2024
 repos:
     - name: GitHub
-      href: https://github.com/acm-tamusa/HackSA-Website
+      href: https://github.com/Joshua-Ludolf/FossilFinances
 deployments:
 tagline: Winner of the 2024 RowdyHacks SWIVEL Challenge.
 ---
