@@ -8,11 +8,11 @@ imageUrl: /res/projects/svelte-sorting-visualizer.png
 feature: true
 date: Sep 04 2023
 deployments:
-    - name: Github Pages
-      href: https://sk3p7ic.github.io/Sorting-Visualizer
+    - name: Vercel
+      href: https://sorting-with-svelte.vercel.app/
 repos:
     - name: GitHub
-      href: https://github.com/sk3p7ic/sorting-visualizer
+      href: https://github.com/sk3p7ic/sorting-with-svelte
 ---
 
 ## About
