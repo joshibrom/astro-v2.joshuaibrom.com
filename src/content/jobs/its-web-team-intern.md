@@ -2,6 +2,7 @@
 title: Web Development Intern
 employer: TAMU-SA ITS Web Team
 startDate: May 20, 2024
+endDate: August 30, 2024
 ---
 While interning for TAMU-SA Information Technology Service's Web Team, I
 
