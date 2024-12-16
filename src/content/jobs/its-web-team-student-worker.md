@@ -1,7 +1,7 @@
 ---
 title: Student Worker
 employer: TAMU-SA ITS Web Team
-startDate: Sep 5, 2024
+startDate: Sep 5, 2023
 endDate: 20 May, 2024
 ---
 While working for TAMU-SA's Information Technology Services, I:
