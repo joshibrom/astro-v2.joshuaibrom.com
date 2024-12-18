@@ -1,5 +1,5 @@
 ---
-title: Graduate Assistant (Non-Teaching)
+title: Research Technician
 employer: TAMU-SA Department of Natural Sciences
 startDate: December 04, 2024
 endDate: 
