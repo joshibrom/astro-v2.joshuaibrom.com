@@ -4,7 +4,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import AboutStatement from '../components/AboutStatement.astro';
 import JobCard from '../components/About/JobCard.astro';
 
-const jobs = (await Astro.glob('../content/jobs/*.md'));
+const jobs = (await Astro.glob('../content/jobs/*.md'))
+    .filter(job => job.frontmatter.published ?? true)
+    .sort((a, b) => new Date(b.frontmatter.startDate).getTime() - new Date(a.frontmatter.startDate).getTime())
 ---
 
 <BaseLayout title="Joshua Ibrom | About">
