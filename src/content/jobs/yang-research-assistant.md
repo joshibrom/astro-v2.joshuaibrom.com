@@ -5,8 +5,9 @@ startDate: August 31, 2024
 endDate: December 04, 2024
 ---
 While acting as a Graduate Research Assitant under Dr. Yang of the Texas A&amp;M
-University - San Antonio Department of Computer Science, I assisted in the
-furtherance of research of the following:
+University - San Antonio Department of Computational, Engineering, and
+mathematical Sciences, I assisted in the furtherance of research of the
+following:
 
 - A Comparative Analysis of Serverless Cloud Computing Platforms
 - A Comparative Analysis of AI/ML Cloud Computing Platforms.
