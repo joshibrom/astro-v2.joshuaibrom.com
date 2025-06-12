@@ -1,5 +1,5 @@
 ---
-title: Sk3p7ic's Blog
+title: sk3p7ic's Blog
 description: My personal blog, where I write about various topics such as programming, technology, and other interests of mine.
 stack:
     - SvelteKit
@@ -8,7 +8,7 @@ stack:
     - Rehype
     - Vercel
 category: Web -- Fullstack
-imageUrl: /res/projects/sk3p7ic-blog.png
+imageUrl: /res/projects/joshibrom-blog.png
 feature: true
 date: Dec 31, 2023
 deployments:
@@ -16,7 +16,7 @@ deployments:
       href: https://blog.joshuaibrom.com
 repos:
     - name: GitHub
-      href: https://github.com/sk3p7ic/blog.joshuaibrom.com
+      href: https://github.com/joshibrom/blog.joshuaibrom.com
 ---
 
 ## About

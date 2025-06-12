@@ -12,7 +12,7 @@ deployments:
       href: https://sorting-with-svelte.vercel.app/
 repos:
     - name: GitHub
-      href: https://github.com/sk3p7ic/sorting-with-svelte
+      href: https://github.com/joshibrom/sorting-with-svelte
 ---
 
 ## About
