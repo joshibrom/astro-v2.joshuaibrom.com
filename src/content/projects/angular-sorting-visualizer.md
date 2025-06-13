@@ -10,10 +10,10 @@ feature: false
 date: Mar 10 2022
 deployments:
     - name: Github Pages
-      href: https://sk3p7ic.github.io/Sorting-Visualizer
+      href: https://joshibrom.github.io/Sorting-Visualizer
 repos:
     - name: GitHub
-      href: https://github.com/sk3p7ic/sorting-visualizer
+      href: https://github.com/joshibrom/sorting-visualizer
 ---
 
 ## About

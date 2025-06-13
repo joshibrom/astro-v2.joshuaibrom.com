@@ -14,7 +14,7 @@ deployments:
       href: https://v1.joshuaibrom.com
 repos:
     - name: GitHub
-      href: https://github.com/sk3p7ic/astro.joshuaibrom.com
+      href: https://github.com/joshibrom/astro.joshuaibrom.com
 ---
 
 ## About

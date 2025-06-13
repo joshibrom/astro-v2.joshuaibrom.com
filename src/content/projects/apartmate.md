@@ -46,7 +46,7 @@ chapter, [Arturo Corona (@arty-aj)](https://github.com/arty-aj) and
 
 ## Team Member Involvement
 
-### Me (@sk3p7ic)
+### Me (@joshibrom)
 
 I designed and built the frontend for the application, making calls to Firebase as needed.
 

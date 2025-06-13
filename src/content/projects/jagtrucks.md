@@ -14,9 +14,9 @@ date: Jul 17 2022
 deployments:
 repos:
     - name: GitHub (Frontend)
-      href: https://github.com/sk3p7ic/wad-JagTrucks
+      href: https://github.com/joshibrom/wad-JagTrucks
     - name: GitHub (Backend)
-      href: https://github.com/sk3p7ic/wad-JagTrucks-backend
+      href: https://github.com/joshibrom/wad-JagTrucks-backend
 ---
 
 ## About
