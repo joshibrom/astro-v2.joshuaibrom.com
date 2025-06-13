@@ -1,5 +1,5 @@
 ---
-title: sk3p7ic's Blog
+title: My Blog
 description: My personal blog, where I write about various topics such as programming, technology, and other interests of mine.
 stack:
     - SvelteKit
