@@ -4,16 +4,10 @@ employer: TAMU-SA ITS Web Team
 startDate: Sep 5, 2023
 endDate: 20 May, 2024
 ---
-While working for TAMU-SA's Information Technology Services, I:
-
-- Edited and created web pages on the University website in Cascade CMS.
-- Maintained correspondence with faculty and staff regarding their webpages.
-- Ensured site quality through checking for and fixing broken links on the
-  University website by using SiteImprove.
-
-Additionally, I aided in the creation and maintenance of a new web application
-for the University in our compliance with HB2504. This application was created
-with the following
-
-- A semi-traditional LAMP stack; and
-- HTML, CSS (primarily Bootstrap), and JavaScript.
+- Managed **3000+ pages** in **Cascade CMS**, utilizing **SiteImprove** to
+  eliminate **over 1000 broken links** and ensure content quality.
+- Implemented **parameter and form validation** on our LAMP stack application,
+  **mitigating potential SQL injection vulnerabilities** and **enhancing data
+  integrity**.
+- Developed a new website for the University Esports program using **HTML, CSS,
+  and Javascript**, increasing program visibility.
