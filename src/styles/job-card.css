@@ -1,0 +1,7 @@
+@tailwind base;
+
+@layer base {
+    .prose strong {
+        @apply text-poimandres-white;
+    }
+}

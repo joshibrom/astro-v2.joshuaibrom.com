@@ -3,6 +3,7 @@ title: Student Worker
 employer: TAMU-SA University Police Dept.
 startDate: Sep 1, 2017
 endDate: Jan 30, 2022
+published: false
 ---
 While working for TAMU-SA UPD I carried out the following duties:
 
