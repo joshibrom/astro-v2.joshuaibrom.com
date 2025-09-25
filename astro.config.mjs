@@ -1,4 +1,4 @@
-import { defineConfig, squooshImageService } from 'astro/config';
+import { defineConfig, sharpImageService } from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
@@ -6,5 +6,5 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   integrations: [icon(), tailwind()],
-  image: { service: squooshImageService() } // TODO: Use sharp
+  image: { service: sharpImageService() },
 });
