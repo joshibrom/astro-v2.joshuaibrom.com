@@ -2,7 +2,7 @@
 title: Research Technician
 employer: TAMU-SA Department of Natural Sciences
 startDate: December 04, 2024
-endDate: 
+endDate: July 14, 2025
 ---
 - Engineered a data pipeline to scrape **\~650 faculty CVs** using an **LLM**
   to convert publication information into APA-formatted citations and
